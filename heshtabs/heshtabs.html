@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>hashtabs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <style>
+    body{
+      height: 100vh;
+      font-size: 16px;
+      padding: 0.5em;
+    };
+    .hashtab__controls { 
+      text-align: center;
+    }
+
+    .hashtab__link {
+      display: inline-block;
+      margin: 0.5em;
+      background-color: #217f64;
+      color: #FFF;
+      border-radius: 3px;
+      padding: 0.5em;
+      text-decoration: none;
+    }
+    .hashtab__link.is-active { background-color: blue; }
+
+    .hashtab__list {
+      hashtab__list-style: none;
+      margin: 1em 0;
+      padding: 0;
+    }
+    .hashtab__content {
+      display: none;
+      min-height: 100px;
+      padding: 1em;
+      background-color: #ccc;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .hashtab__content.is-active{
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <hr>
+  <div class="hashtab js-hashtab">
+    <div class="hashtab__controls js-hashtab__controls">
+      <a href="#tab1-1" class="hashtab__link js-hashtab__link is-active">tab1 link</a>
+      <a href="#tab1-2" class="hashtab__link js-hashtab__link">tab2 link</a>
+      <a href="#tab1-3" class="hashtab__link js-hashtab__link">tab3 link</a>
+      <a href="#tab1-4" class="hashtab__link js-hashtab__link">tab4 link</a>
+      <a href="#tab1-5" class="hashtab__link js-hashtab__link">tab5 link</a>
+      <a href="#tab1-6" class="hashtab__link js-hashtab__link">tab6 link</a>
+    </div>
+    <ul class="hashtab__list js-hashtab__list">
+      <li class="hashtab__content js-hashtab__content is-active" data-tab-content="tab1-1">
+        <h2>1 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quisquam, ea labore culpa soluta quasi. Ex deleniti, praesentium facilis. Velit!</p>
+      </li>
+      <li class="hashtab__content js-hashtab__content" data-tab-content="tab1-2">
+        <h2>2 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, sapiente. Assumenda praesentium dolor veritatis error, voluptate adipisci aliquam distinctio, necessitatibus odit earum, vero nobis, a sequi id omnis fugit inventore!</p>
+      </li>
+      <li class="hashtab__content js-hashtab__content" data-tab-content="tab1-3">
+        <h2>3 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, architecto.</p>
+      </li>
+      <li class="hashtab__content js-hashtab__content" data-tab-content="tab1-4">
+        <h2>4 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos deleniti aliquam ratione, possimus dolorem, voluptas earum tenetur quia atque sapiente rem autem dolorum officiis nulla.</p>
+      </li>
+      <li class="hashtab__content js-hashtab__content" data-tab-content="tab1-5">
+        <h2>5 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos deleniti aliquam ratione, possimus dolorem, voluptas earum tenetur quia atque sapiente rem autem dolorum officiis nulla.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et amet, sapiente tempore eum laudantium, quo?</p>
+      </li>
+      <li class="hashtab__content js-hashtab__content" data-tab-content="tab1-6">
+        <h2>6 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos deleniti aliquam ratione, possimus dolorem, voluptas earum tenetur quia atque sapiente rem autem dolorum officiis nulla.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos deleniti aliquam ratione, possimus dolorem, voluptas earum tenetur quia atque sapiente rem autem dolorum officiis nulla.</p>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div class="hashtab js-hashtab">
+    <div class="hashtab__controls js-hashtab__controls">
+      <a href="#tab2-1" class="hashtab__link js-hashtab__link is-active">tab1 link</a>
+      <a href="#tab2-2" class="hashtab__link js-hashtab__link">tab2 link</a>
+      <a href="#tab2-3" class="hashtab__link js-hashtab__link">tab3 link</a>
+      <a href="#tab2-4" class="hashtab__link js-hashtab__link">tab4 link</a>
+      <a href="#tab2-5" class="hashtab__link js-hashtab__link">tab5 link</a>
+      <a href="#tab2-6" class="hashtab__link js-hashtab__link">tab6 link</a>
+    </div>
+    <ul class="hashtab__list js-hashtab__list">
+      <li class="hashtab__content js-hashtab__content is-active" data-tab-content="tab2-1">
+        <h2>1 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quisquam, ea labore culpa soluta quasi. Ex deleniti, praesentium facilis. Velit!</p>
+      </li>
+      <li class="hashtab__content js-hashtab__content" data-tab-content="tab2-2">
+        <h2>2 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, sapiente. Assumenda praesentium dolor veritatis error, voluptate adipisci aliquam distinctio, necessitatibus odit earum, vero nobis, a sequi id omnis fugit inventore!</p>
+      </li>
+      <li class="hashtab__content js-hashtab__content" data-tab-content="tab2-3">
+        <h2>3 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, architecto.</p>
+      </li>
+      <li class="hashtab__content js-hashtab__content" data-tab-content="tab2-4">
+        <h2>4 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos deleniti aliquam ratione, possimus dolorem, voluptas earum tenetur quia atque sapiente rem autem dolorum officiis nulla.</p>
+      </li>
+      <li class="hashtab__content js-hashtab__content" data-tab-content="tab2-5">
+        <h2>5 TAB</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos deleniti aliquam ratione, possimus dolorem, voluptas earum tenetur quia atque sapiente rem autem dolorum officiis nulla.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et amet, sapiente tempore eum laudantium, quo?</p>
+      </li>
+    </ul>
+  </div>
+  <hr>
+
+  <script>
+    // (function($) {
+    //   $(function() {
+
+    //     $('.js-hashtab__controls').on('click', 'js-hashtab__link:not(.is-active)', function() {
+    //       $(this)
+    //         .addClass('is-active').siblings().removeClass('is-active')
+    //         .closest('.js-hashtab__list').find('.js-hashtab__content').removeClass('is-active').eq($(this).index()).addClass('is-active');
+    //     });
+
+    //     var tabIndex = window.location.hash.replace('#tab','')-1;
+    //     if (tabIndex != -1) $('.js-hashtab__controls js-hashtab__link').eq(tabIndex).click();
+
+    //     $('a').click(function() {
+    //       var tabIndex = $(this).attr('href').replace(/(.*)#tab/, '')-1;
+    //       $('.js-hashtab__controls js-hashtab__link').eq(tabIndex).click();
+    //     });
+
+    //   });
+    // })(jQuery);
+  ;(function () {
+    var HESHTAB = {
+      
+    }
+
+
+
+    var $ht = $('.js-hashtab');
+    var $links = $('.js-hashtab__link');
+    var $contents = $('.js-hashtab__content'); 
+    // var updatestate;
+
+    $ht.each(updatestate);
+
+    var updatestate = function () {
+      var $this = $(this);
+      var $ht_controls = $this.find('.js-hashtab__controls');
+      var $ht_Links = $this.find('.js-hashtab__link');
+      var $ht_ContentList = $this.find('.js-hashtab__list');
+      var $ht_Tabs = $this.find('.js-hashtab__content');
+
+      $ht_Links.on('click', updatestate2);
+
+      function updatestate2() {
+        var hash = location.hash;
+
+        $ht_Links.removeClass('is-active');
+        $ht_Links.filter('[href="' + hash + '"]').addClass('is-active');
+
+        $ht_Tabs.removeClass('is-active');
+        $ht_Tabs.filter('[data-tab-content="' + hash.slice(1) + '"]').addClass('is-active');
+      };
+    };
+
+    // function updatestate() {
+    //   var hash = location.hash;
+
+    //   $ht_Links.removeClass('is-active');
+    //   $ht_Links.filter('[href="' + hash + '"]').addClass('is-active');
+
+    //   $ht_Tabs.removeClass('is-active');
+    //   $ht_Tabs.filter('[data-tab-content="' + hash.slice(1) + '"]').addClass('is-active');
+    // };
+
+    // window.addEventListener('hashchange', updatestate);
+    // window.addEventListener('load', updatestate);
+  })();
+  </script>
+</body>
+</html>

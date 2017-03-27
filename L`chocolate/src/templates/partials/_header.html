@@ -1,0 +1,45 @@
+<!-- BEGIN primary-header -->
+<div class="primary-header">
+  <!-- BEGIN primary-header__topline -->
+  <div class="primary-header__topline">
+    <!-- BEGIN primary-wrapper -->
+    <div class="primary-wrapper">
+      <a href="#" class="primary-logo">L`chocolat</a>
+
+      <!-- BEGIN cart -->
+      <div class="cart">
+        <button class="cart__btn">корзина</button>
+      </div>
+      <!-- END cart -->
+    </div>
+    <!-- END primary-wrapper -->
+  </div>
+  <!-- END primary-header__topline -->
+  <!-- BEGIN primary-header__botline -->
+  <div class="primary-header__botline">
+    <!-- BEGIN primary-wrapper -->
+    <div class="primary-wrapper">
+      <a href="#" class="primary-logo"><img src="img/logo.jpg" alt="L`chocolat logo"></a>
+    </div>
+    <!-- END primary-wrapper -->
+  </div>
+  <!-- END primary-header__botline -->
+  <!-- BEGIN primary-header__nav -->
+  <div class="primary-header__nav">
+    <!-- BEGIN primary-wrapper -->
+    <div class="primary-wrapper">
+      <!-- BEGIN primary-nav -->
+      {{mixins.list('primary-nav', ['главная', 'товары и услуги', 'о нас', 'клиентам', 'контакты'])}}
+      <!-- END primary-nav -->
+      <!-- BEGIN primary-search -->
+      <div class="primary-search">
+        <input class="primary-search__input" type="search">
+        <input class="primary-search__submit" type="submit" value="поиск">
+      </div>
+      <!-- END primary-search -->
+    </div>
+    <!-- END primary-wrapper -->
+  </div>
+  <!-- END primary-header__nav -->
+</div>
+<!-- END primary-header -->

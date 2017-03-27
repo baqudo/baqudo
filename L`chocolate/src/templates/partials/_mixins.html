@@ -1,0 +1,16 @@
+{% macro icon(i) %}
+<svg class="icon icon-{{i}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
+{% endmacro %}
+{# how to use? {{mixins.icon('name')}} #}
+
+{% macro list(className, items) %}
+  <ul class="{{className}}">
+    {% for item in items %}
+      <li class="{{className}}__item">
+        <a {% if item.href %} href="{{item.href}}" {% else %} href="#" {% endif %}
+          class="{{className}}__link">{% if item.title %}{{item.title}}{% else %}{{item}}{% endif %}</a>        
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+{# how to use? {{mixins.list('className', array[] )}} #}

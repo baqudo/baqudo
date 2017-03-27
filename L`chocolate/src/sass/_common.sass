@@ -1,0 +1,82 @@
+$primary-color: #90c
+$red-color: #e61a23
+a
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+body
+	background: #FFF
+	font-size: 16px 
+	line-height: 1.4
+
+.primary
+
+.primary-wrapper
+  max-width: 1440px
+  margin: 0 auto
+  position: relative
+  +clr
+  +rmin(1440)
+    padding: 0 10px 
+.primary-logo
+  display: inline-block
+  color: #FFF
+  font-weight: bold 
+  padding: 0 0.5em 
+.cart
+  margin-right: 0.5em 
+  float: right
+  display: inline-block
+  &__btn
+    display: inline-block
+    padding: 0.5em 1em
+    line-height: 1
+    background-color: $red-color
+    color: #FFF
+    font-weight: medium
+    text-transform: uppercase 
+    border-radius: 3px 
+
+.primary-header
+  overflow: hidden
+  &__topline
+    background-color: $primary-color 
+    // background-image: linear-gradient(75deg, $primary-color 0%, transparent 10%, $primary-color 20%, transparent 30%, $primary-color 40%, transparent 50%, $primary-color 60%, transparent 70%, $primary-color 80%, transparent 90%, $primary-color 100%)
+    line-height: 50px 
+    height: 50px 
+  &__botline
+    background-color: #fff 
+    text-align: center
+  &__nav
+    background-color: $primary-color
+
+.primary-nav
+  float: left
+  &__item
+    display: inline-block
+  &__link
+    display: block
+    color: #FFF 
+    text-transform: uppercase
+    padding: 0.5em
+    margin-right: 0.5em 
+    line-height: 1.4 
+    &:hover, &.is-active
+      background-color: rgba(255, 255, 255, 0.5)
+
+.primary-search
+  float: right
+  +clr
+  &__input
+    border-radius: 3px
+    background-color: #fff
+    margin: 0.2em 0
+    padding: 0.3em
+  &__submit
+    border-radius: 3px
+    background-color: $red-color
+    padding: 0.3em
+    margin-right: 1em
+    color: #FFF
+    text-transform: uppercase 

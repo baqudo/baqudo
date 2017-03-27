@@ -1,0 +1,16 @@
+- var svgSprite = 'img/sprite.svg'
+
+mixin icon(name, modClass)
+  if modClass == undefined
+    - var modClass = ''
+  else
+    - var modClass = ' ' + modClass
+  svg(class=name + modClass)
+    use(xlink:href= svgSprite + '#' + name)
+
+mixin list(className, items)
+  ul(class=className)
+    each item in items
+      li(class=className+'__item')
+        a(href='#'+item)(class=className+'__link')= item
+//- +list('my-list', 1, 2, 3, 4)

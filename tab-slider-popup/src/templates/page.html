@@ -1,0 +1,49 @@
+---
+title: tab-slider-popup
+links: link1, link2
+menu: [
+{ title: home, href: /home },
+{	title: about, href: /about },
+{ title: catalog, href: /catalog },
+{	title: contacts, href: /contacts },
+{ title: sale, href: /sale }
+]
+menu2: [home, about, href, sale, contacts]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{# variable example #}
+	<h1>{{title}}</h1>
+	
+	{# partial example #}
+	{% include "partials/_header.html" %}
+
+	{# {{mixins.list('menu', menu)}} #}
+
+	{# data usage example #}
+{# 		{% import "data/data.html" as tests %}
+		
+		{% for test in tests.list %}
+		<li>{{test.title}}</li>
+		{% endfor %} #}
+	{# end of example #}
+
+	<!-- BEGIN popup-container -->
+	<div class="popup-container">
+		<!-- BEGIN popup-box -->
+		<div class="popup-box">
+			<button class="popup-close-btn"></button>
+			<div class="popup-slide-counter">
+				<span class="popup-slide-counter__current">1</span> / <span class="popup-slide-counter__all">4</span>
+			</div>
+			<!-- BEGIN popup-slider -->
+			<div class="popup-slider"></div>
+			<!-- END popup-slider -->
+		</div>
+		<!-- END popup-box -->
+	</div>
+	<!-- END popup-container -->
+
+{% endblock %}

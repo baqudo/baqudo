@@ -1,0 +1,41 @@
+body
+	background: #FFF
+	+css-lock(16, 20, 600, 1000)
+	font-size: 16px 
+	line-height: 1.4
+	padding: 1em 
+.tab
+	display: none
+	height: 300px 
+	color: #FFF
+	padding: 1em  
+	text-transform: uppercase
+	&.is-active
+		display: block
+
+.nav
+	margin-bottom: 1em 
+	a
+		display: inline-block
+		margin: 0 1em 
+		padding: 1em
+		border: 1px solid green 
+		&.is-active
+			color: red
+			text-decoration: underline 
+
+.tab1
+	background-color: blue
+.tab2
+ background-color: green
+.tab3
+ background-color: purple
+.tab4
+ background-color: yellowgreen 
+
+#contain
+	height: 50px
+	line-height: 50px
+	text-transform: uppercase
+	text-align: center
+	background-color: #ccc
