@@ -2750,6 +2750,8 @@ function sayHello() {
 })();
 
 sayHello();
+
+// --------------------------------------tab-slider-popup-slider--------------------------------------
 $(function () {
 
   var slickOpt = {
@@ -2789,7 +2791,6 @@ $(function () {
     var $slider = $contentItem.eq(itemPosition).children($sliders);
 
     if (!$slider.slick(slickOpt)) {
-      contentIte;
       $slider.slick(slickOpt);
     }
   }
