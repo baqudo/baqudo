@@ -419,7 +419,7 @@ body {
 .slide__btn {
   display: block;
   width: 100%;
-  padding: 1em;
+  padding: 0.5em;
   background-color: rgba(204, 51, 0, 0.51);
   position: absolute;
   left: 0;
