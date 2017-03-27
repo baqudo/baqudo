@@ -21,6 +21,7 @@ $(function () {
       $moreBtn = $('.js-more-btn'),
       $closeBtn = $('.popup-close-btn'),
       $popup = $('.popup-container'),
+      $popupBox = $('.popup-box'),
       $popupSlider = $('.popup-slider');
 
     $sliders.filter('.is-active').slick(slickOpt);
@@ -97,5 +98,10 @@ $(function () {
   $tabControl.on('click', swithTab);
   $moreBtn.on('click', initPopup);
   $closeBtn.on('click', closePopup);
+
+
+  $popup.on('click', function(event) {
+    if (event.target == this) closePopup();
+  });
 });
 

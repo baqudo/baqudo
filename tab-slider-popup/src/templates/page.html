@@ -1,13 +1,6 @@
 ---
 title: tab-slider-popup
 links: link1, link2
-menu: [
-{ title: home, href: /home },
-{	title: about, href: /about },
-{ title: catalog, href: /catalog },
-{	title: contacts, href: /contacts },
-{ title: sale, href: /sale }
-]
 menu2: [home, about, href, sale, contacts]
 ---
 {% extends "layouts/_layout.html" %}
@@ -20,15 +13,181 @@ menu2: [home, about, href, sale, contacts]
 	{# partial example #}
 	{% include "partials/_header.html" %}
 
-	{# {{mixins.list('menu', menu)}} #}
+<div class="tabs">
+  <div class="tabs__nav">
+    <a class="tabs__link is-active" href="#tab1">tab1</a>
+    <a class="tabs__link" href="#tab2">tab2</a>
+  </div>
+  <div class="tabs__list">
+    <!-- BEGIN tabs__content -->
+    <div class="tabs__content is-active">
+      <!-- BEGIN slider -->
+      <div class="slider is-active">
+        <div class="slide">
+          <div class="slide__img" style="background-image: url(https://placekitten.com/250/200);"></div>
+          <p>tab 1</p>
+          <h4 class="slide__title">title 1</h4>
+          <p class="slide__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nulla?</p>
+          <ul class="slide__text">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>
+            	<ul>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            	</ul>
+            </li>
+          </ul>
+          <button class="slide__btn js-more-btn">more</button>
+        </div>
+        <div class="slide">
+          <div class="slide__img" style="background-image: url(https://placekitten.com/600/500);"></div>
+          <p>tab 1</p>
+          <h4 class="slide__title">title 2</h4>
+          <p class="slide__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nulla?</p>
+          <ul class="slide__text">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>
+            	<ul>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            	</ul>
+            </li>
+          </ul>
+          <button class="slide__btn js-more-btn">more</button>
+        </div>
+        <div class="slide">
+          <div class="slide__img" style="background-image: url(https://placekitten.com/510/200);"></div>
+          <p>tab 1</p>
+          <h4 class="slide__title">title 3</h4>
+          <p class="slide__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nulla?</p>
+          <ul class="slide__text">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>
+            	<ul>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            	</ul>
+            </li>
+          </ul>
+          <button class="slide__btn js-more-btn">more</button>
+        </div>
+        <div class="slide">
+          <div class="slide__img" style="background-image: url(https://placekitten.com/310/200);"></div>
+          <p>tab 1</p>
+          <h4 class="slide__title">title 4</h4>
+          <p class="slide__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nulla?</p>
+          <ul class="slide__text">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>
+            	<ul>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            	</ul>
+            </li>
+          </ul>
+          <button class="slide__btn js-more-btn">more</button>
+        </div>
+      </div>
+      <!-- END slider -->
+    </div>
+    <!-- END tabs__content -->
+    <!-- BEGIN tabs__content -->
+    <div class="tabs__content">
+      <div class="slider">
+        <div class="slide">
+          <div class="slide__img" style="background-image: url(https://placekitten.com/550/500);"></div>
+          <p>tab 2</p>
+          <h4 class="slide__title">title 1</h4>
+          <p class="slide__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nulla?</p>
+          <ul class="slide__text">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>
+            	<ul>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            	</ul>
+            </li>
+          </ul>
+          <button class="slide__btn js-more-btn">more</button>
+        </div>
+        <div class="slide">
+          <div class="slide__img" style="background-image: url(https://placekitten.com/600/560);"></div>
+          <p>tab 2</p>
+          <h4 class="slide__title">title 2</h4>
+          <p class="slide__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nulla?</p>
+          <ul class="slide__text">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>
+            	<ul>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            	</ul>
+            </li>
+          </ul>
+          <button class="slide__btn js-more-btn">more</button>
+        </div>
+        <div class="slide">
+          <div class="slide__img" style="background-image: url(https://placekitten.com/310/400);"></div>
+          <p>tab 2</p>
+          <h4 class="slide__title">title 3</h4>
+          <p class="slide__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nulla?</p>
+          <ul class="slide__text">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>
+            	<ul>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            	</ul>
+            </li>
+          </ul>
+          <button class="slide__btn js-more-btn">more</button>
+        </div>
+        <div class="slide">
+          <div class="slide__img" style="background-image: url(https://placekitten.com/610/400);"></div>
+          <p>tab 2</p>
+          <h4 class="slide__title">title 4</h4>
+          <p class="slide__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nulla?</p>
+          <ul class="slide__text">
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>
+            	<ul>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde architecto, a necessitatibus at harum praesentium!</li>
+            	</ul>
+            </li>
+          </ul>
+          <button class="slide__btn js-more-btn">more</button>
+        </div>
+      </div>
+    </div>
+    <!-- END tabs__content -->
+  </div>
+</div>
 
-	{# data usage example #}
-{# 		{% import "data/data.html" as tests %}
-		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %} #}
-	{# end of example #}
 
 	<!-- BEGIN popup-container -->
 	<div class="popup-container">
