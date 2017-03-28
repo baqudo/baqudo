@@ -13,7 +13,7 @@ $(function () {
     infinite: false,
     slidesToShow: 2,
     slidesToScroll: 1
-  }
+  };
 
   var $tabControl = $('.tabs__link'),
       $tabControlNotActive = $tabControl.filter(':not(.is-active)'),
@@ -26,38 +26,25 @@ $(function () {
       $popupBox = $('.popup-box'),
       $popupSlider = $('.popup-slider');
 
-    $sliders.filter('.is-active').slick(slickOpt);
+    $('.slider').filter('.is-active').slick(slickOpt);
 
-    function  swithTab(e) {
-      var $target = $(this),
-        itemPosition = $target.index();
 
-      $target
-        .addClass('is-active')
-        .siblings().removeClass('is-active');
-      $contentItem
-        .eq(itemPosition).addClass('is-active')
-        .siblings().removeClass('is-active');
+  function initSlider(e){
+
+    var
+      $target = $(this),
+      itemPosition = $target.index();
+
+    $target.addClass('is-active').siblings().removeClass('is-active');   
+    $contentItem.eq(itemPosition).addClass('is-active').siblings().removeClass('is-active');
+
+    if ($('.slider:hidden').hasClass('slick-slider')) {
+      $('.slider:hidden').slick('unslick');
+      console.log('msg')
     }
 
-
-    function initSlider(e){
-      var $target = $(this),
-        itemPosition = $target.index();
-
-      $target
-        .addClass('is-active')
-        .siblings().removeClass('is-active');
-      $contentItem
-        .eq(itemPosition).addClass('is-active')
-        .siblings().removeClass('is-active');
-
-      var $slider = $contentItem.eq(itemPosition).children($sliders);
-
-      if(!$slider.slick(slickOpt)) {
-        $slider.slick(slickOpt);
-      }
-    }
+    $contentItem.eq(itemPosition).children('.slider').slick(slickOpt);
+  }
 
 
   function initPopup() {
@@ -71,8 +58,6 @@ $(function () {
     $popup.css('display', 'block');
     $slideCounterCurrent.text($currentSlide + 1);
     $slideCounterAll.text(newSlides.length);
-    // console.log(currentSlide);
-    // console.log(newSlides.length);
 
     newSlides.clone().appendTo($popupSlider);
 
@@ -95,8 +80,7 @@ $(function () {
     $popup.css('display', 'none');
   }
 
-  $tabControlNotActive.one('click', initSlider);
-  $tabControl.on('click', swithTab);
+  $tabControl.on('click', initSlider);
   $moreBtn.on('click', initPopup);
   $closeBtn.on('click', closePopup);
 
