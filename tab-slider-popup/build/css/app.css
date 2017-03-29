@@ -319,6 +319,11 @@ body {
   line-height-height: 100%;
 }
 
+.tabs {
+  width: 50%;
+  float: left;
+}
+
 .tabs__nav {
   width: 100%;
   margin: 1em auto;
