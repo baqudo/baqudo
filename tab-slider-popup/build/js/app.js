@@ -2765,7 +2765,6 @@ $(function () {
   $tabs.each(function () {
     var $tabNav = $(this).find('.tabs__nav'),
         $tabControl = $(this).find('.tabs__link'),
-        $tabControlNotActive = $tabControl.filter(':not(.is-active)'),
         $contentList = $(this).find('.tabs__list'),
         $contentItem = $(this).find('.tabs__content'),
         $sliders = $(this).find('.slider'),
@@ -2776,7 +2775,7 @@ $(function () {
         $popupSlider = $('.popup-slider');
 
     function initSlider(e) {
-
+      e.preventDefault();
       var $target = $(this),
           itemPosition = $target.index();
 
@@ -2787,7 +2786,7 @@ $(function () {
 
       if ($sliderHidden.hasClass('slick-slider')) {
         $sliderHidden.slick('unslick');
-        console.log('msg');
+        console.log("it's work!");
       }
 
       $contentItem.eq(itemPosition).children('.slider').slick(slickOpt);
