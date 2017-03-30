@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>watch arrow</title>
+  <style>
+    body {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+    }
+    .arrow2 {
+      left: 80%;
+    }
+    .arrow3 {
+      left: 20%;
+    }
+  </style>
+</head>
+<body>
+  <img class="arrow" src="Arrow_Back-128.png" height="128" width="128" alt="arrow"><!-- 
+  <img class="arrow arrow2" src="Arrow_Back-128.png" height="128" width="128" alt="arrow">
+  <img class="arrow arrow3" src="Arrow_Back-128.png" height="128" width="128" alt="arrow"> -->
+
+
+  <script>
+  ;(function() {
+    var targets = document.querySelectorAll('.arrow');
+    for (var i = 0; i < targets.length; i++) {
+      watchOnMouse(targets[i]);
+    }
+
+    function watchOnMouse(target){
+      var x0 = target.offsetLeft + target.offsetWidth / 2;
+      var y0 = target.offsetTop + target.offsetHeight / 2;
+
+      document.addEventListener('mousemove', function(e) {
+        var x1 = e.clientX;
+        var y1 = e.clientY;
+        var x = x1 - x0;
+        var y = y1 - y0;
+        var r = 180 + 1 - 180 / Math.PI * Math.atan2(y, x);
+        // target.style.transform = ('rotate(-' + r + 'deg)');
+        target.setAttribute('style','transform: translate(-50%,-50%) rotate(-' + r + 'deg)');
+      })
+    }
+  })();
+  </script>
+</body>
+</html>

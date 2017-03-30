@@ -253,31 +253,6 @@
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script>
-  // ;(function() {
-  //   var target = document.querySelectorAll('#img');
-
-
-  //   var fn = function (arguments) {
-  //     console.log(this.offsetLeft)
-  //     console.log(this.offsetTop)
-  //   }
-
-  //   fn.call(target);
-
-  //   var watchMouse = function () {
-  //     return this.forEach(function () {
-  //       var positionLeft = this.offsetLeft;
-  //       var positionTop = this.offsetTop;
-  //       console.log(positionLeft);
-  //       console.log(positionTop)
-  //     })
-  //   }
-
-  //   watchMouse.call(target);
-
-  // })();
-  </script>
-  <script>
     (function($) {
       $.fn.rotateImg = function(options) {
         var defaults = {deg : 0};
@@ -314,46 +289,29 @@
       $('.imgWrap').each(function () {
         var r, g, b;
 
-          function getRandomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-          }
-          r =  getRandomInt(0, 255);
-          g =  getRandomInt(0, 255);
-          b =  getRandomInt(0, 255);
+        function getRandomInt(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        r =  getRandomInt(0, 255);
+        g =  getRandomInt(0, 255);
+        b =  getRandomInt(0, 255);
 
         $(this).css('background-color','rgba('+r+','+g+','+b+',0.5)');
-      })
+      });
     });
-  </script>
 
-
-  <script>
-  //   ;(function(){
-  //     var mouseX = 0, mouseY = 0, limitX = 200-10, limitY = 200-10; // Определяет границы, по которым будет двигаться объект
-  //     var out = document.getElementById('out');
-  //     var imgWrap = document.getElementById('imgWrap');
-  //     var img = document.getElementById('img');
-  //     var body = document.body;
-
-  //     window.addEventListener('mousemove', function(e){
-  //         var offsetL = imgWrap.offsetLeft;
-  //         var offsetT = imgWrap.offsetTop;
-  //         mouseX = Math.min(e.pageX - offsetL, limitX);
-  //         mouseY = Math.min(e.pageY - offsetT, limitY); // Ищет координаты курсора
-  //         if (mouseX < 0) mouseX = 0;  // С какого момента (координат) начинать движение за курсором
-  //         if (mouseY < 0) mouseY = 0; // Если курсор находится вне веб-страницы на момент загрузки, то установит объект в координатах x=0, y=0.
-  //     });
-  //     var xp = 0, yp = 0; // Начальные координаты объекта на момент загрузки страницы
-  //     var loop = setInterval(function(){
-  //         // Далее определяется скорость, с которой будет двигаться объект.
-  //         // Изменить значение 20, для изменения скорости. Чем больше это значение, тем медленнее движется объект.
-  //         xp += (mouseX - xp) / 1;
-  //         yp += (mouseY - yp) / 1;
-  //         img.setAttribute('style',left=xp, top = yp); // Изменение позиционирования объекта с помощью css
-  //         out.value = 'screen: ' + xp + 'x' + yp;
-  //         img.
-  //     }, 10); //В данном случае это значение определяет, насколько плавно и быстро будет происходить движение
-  //   })();
+    
+      // document.addEventListener('click', function () {
+      //   function getRandomInt(min, max) {
+      //     return Math.floor(Math.random() * (max - min + 1)) + min;
+      //   }
+      //   var colors = [];
+      //   for (var i = 0; i < 3; i++) {
+      //     colors[i] = getRandomInt(0, 255);
+      //   }
+      //   target.style.backgroundColor = 'rgba('+colors+',0.5)';
+      // })
   </script>
 </body>
 </html>
